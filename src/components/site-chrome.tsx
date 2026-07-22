@@ -157,7 +157,7 @@ export function PageHeader({
   eyebrowColor?: string;
 }) {
   return (
-    <section className="hero-radial page-header reveal-section">
+    <section className="hero-radial page-header page-header-enter reveal-section">
       <ChevronPattern className="absolute inset-0 h-full w-full text-white/10" />
       <div className="container-mentto page-header-inner">
         <span className={`eyebrow ${eyebrowColor} reveal`}>{eyebrow}</span>

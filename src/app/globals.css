@@ -46,8 +46,8 @@
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-slow: cubic-bezier(0.22, 1, 0.36, 1);
-  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Base state — elementos que aguardam reveal pelo Framer Motion */
@@ -183,10 +183,10 @@
   }
 }
 
-/* Global utility override para garantir que a classe Tailwind .transition seja ultra-suave */
+/* Global utility override para garantir que a classe Tailwind .transition seja ultra-suave e tranquila */
 .transition, .transition-all {
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-  transition-duration: 350ms !important;
+  transition-duration: 450ms !important;
 }
 
 /* Simple utilities (no pseudo-classes) */

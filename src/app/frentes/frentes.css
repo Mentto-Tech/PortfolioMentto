@@ -1,0 +1,35 @@
+/* ============================================
+   frentes.css — Página de frentes de trabalho
+   ============================================ */
+
+.frentes-card {
+  position: relative;
+  background-color: var(--color-branco);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+@media (min-width: 768px) {
+  .frentes-card {
+    padding: 2.5rem;
+  }
+}
+
+.frentes-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.frentes-card-cta {
+  margin-top: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-petroleo);
+  transition: transform 0.2s;
+}
+
+.frentes-card:hover .frentes-card-cta {
+  transform: translateX(4px);
+}

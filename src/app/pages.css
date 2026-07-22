@@ -1,0 +1,122 @@
+/* ============================================
+   pages.css — Componentes comuns de páginas internas
+   ============================================ */
+
+/* Benefícios box (usado em rota, ponte, mergulho, tech-lab) */
+.benefit-box {
+  padding: 1.5rem;
+  background-color: var(--color-neutro);
+  border-radius: 0.5rem;
+  border-left: 4px solid;
+}
+
+.benefit-box-verde {
+  border-color: var(--color-verde);
+}
+
+.benefit-box-amarelo {
+  border-color: var(--color-amarelo);
+}
+
+.benefit-box-terracota {
+  border-color: var(--color-terracota);
+}
+
+.benefit-box-petroleo {
+  border-color: var(--color-petroleo);
+}
+
+.benefit-box-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--color-petroleo);
+}
+
+.benefit-box-desc {
+  margin-top: 0.5rem;
+  color: rgba(51, 51, 51, 0.8);
+  line-height: 1.6;
+}
+
+/* Público card (usado em mentto) */
+.publico-page-card {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-branco);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .publico-page-card {
+    padding: 3rem;
+  }
+}
+
+/* CTA bar footer (usado em várias páginas) */
+.cta-bar-root {
+  background-color: var(--color-petroleo);
+  color: var(--color-branco);
+}
+
+.cta-bar-verde {
+  background-color: var(--color-verde);
+}
+
+.cta-bar-inner {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .cta-bar-inner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.cta-bar-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  max-width: 42rem;
+}
+
+@media (min-width: 768px) {
+  .cta-bar-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Tema de cards do tech lab */
+.tema-card {
+  padding: 2rem;
+  background-color: var(--color-neutro);
+  border-radius: 0.5rem;
+}
+
+.tema-card-bar {
+  height: 4px;
+  width: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tema-card-bar-terracota {
+  background-color: var(--color-terracota);
+}
+
+.tema-card-bar-petroleo {
+  background-color: var(--color-petroleo);
+}
+
+.tema-card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-petroleo);
+}

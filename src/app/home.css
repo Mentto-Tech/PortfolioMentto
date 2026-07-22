@@ -1,0 +1,87 @@
+/* ============================================
+   home.css — Seções exclusivas da home
+   ============================================ */
+
+/* ---- ValueStrip ---- */
+.value-strip {
+  background-color: var(--color-branco);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+/* ---- Frente cards (home) ---- */
+.frente-card {
+  position: relative;
+  background-color: var(--color-branco);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+.frente-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 768px) {
+  .frente-card {
+    padding: 2.5rem;
+  }
+}
+
+/* ---- Rota cards (home) ---- */
+.rota-card {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.rota-card-light {
+  background-color: var(--color-neutro);
+}
+
+.rota-card-heavy {
+  background-color: var(--color-petroleo);
+  color: var(--color-branco);
+  box-shadow: var(--shadow-lg);
+}
+
+.rota-card-top-verde {
+  position: absolute;
+  top: 0; left: 0;
+  height: 4px; width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--color-verde);
+}
+
+.rota-card-top-terracota {
+  position: absolute;
+  top: 0; left: 0;
+  height: 4px; width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--color-terracota);
+}
+
+.rota-card-top-amarelo {
+  position: absolute;
+  top: 0; left: 0;
+  height: 4px; width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--color-amarelo);
+}
+
+/* ---- Público cards (home) ---- */
+.publico-card {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-neutro);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .publico-card {
+    padding: 3rem;
+  }
+}

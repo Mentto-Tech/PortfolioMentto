@@ -1,0 +1,284 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Mentto design system
+ * Paleta: Petróleo #083D5F (primária) · Verde #107F8D · Terracota #C25D44 · Amarelo #FFC300
+ * Tipografia: Poppins (heading) · Open Sans (corpo)
+ * Fundos: Branco #FFFFFF · Off-white #F3F1EB
+ */
+
+@theme inline {
+  --color-petroleo: #083D5F;
+  --color-verde: #107F8D;
+  --color-terracota: #C25D44;
+  --color-amarelo: #FFC300;
+  --color-grafite: #333333;
+  --color-neutro: #F3F1EB;
+  --color-branco: #FFFFFF;
+
+  --color-background: #F3F1EB;
+  --color-foreground: #333333;
+  --color-border: rgba(51, 51, 51, 0.12);
+  --color-border-input: rgba(51, 51, 51, 0.25);
+  --color-border-subtle: rgba(51, 51, 51, 0.08);
+
+  --font-heading: "Poppins", "Gill Sans Nova", sans-serif;
+  --font-body: "Open Sans", "Source Sans 3", "Roboto", Arial, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(8, 61, 95, 0.06);
+  --shadow-md: 0 4px 12px rgba(8, 61, 95, 0.08);
+  --shadow-lg: 0 12px 32px rgba(8, 61, 95, 0.12);
+  --shadow-form: 0 12px 32px rgba(8, 61, 95, 0.2);
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* ============================================
+   Animações globais — scroll reveal & transitions
+   ============================================ */
+
+:root {
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-slow: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Base state — elementos que aguardam reveal pelo Framer Motion */
+.reveal, .reveal-section, .reveal-left, .reveal-scale, .reveal-blur {
+  opacity: 0;
+  /* O transform inicial será aplicado pelo framer-motion no DOM, 
+     mas podemos manter um fallback leve para evitar FOUC */
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    background-color: var(--color-neutro);
+    color: var(--color-grafite);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-petroleo);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-amarelo);
+    color: var(--color-grafite);
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.375rem;
+    background-color: var(--color-petroleo);
+    padding: 0.625rem 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-branco);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(8, 61, 95, 0.85);
+    }
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.375rem;
+    border: 1.5px solid var(--color-petroleo);
+    padding: 0.625rem 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-petroleo);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(8, 61, 95, 0.05);
+    }
+  }
+
+  .btn-highlight {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.375rem;
+    background-color: var(--color-amarelo);
+    padding: 0.625rem 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-grafite);
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+
+  /* Form input */
+  .form-input {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: 1.5px solid var(--color-border-input);
+    background-color: var(--color-branco);
+    padding: 0.75rem 1rem;
+    color: var(--color-grafite);
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: var(--color-petroleo);
+    }
+  }
+
+  /* CTA contact links */
+  .cta-contact-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-amarelo);
+    }
+  }
+}
+
+/* Simple utilities (no pseudo-classes) */
+@utility container-mentto {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@utility hero-radial {
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.08), transparent 60%),
+    var(--color-petroleo);
+}
+
+@utility eyebrow {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@utility eyebrow-petroleo {
+  color: var(--color-petroleo);
+}
+
+@utility eyebrow-verde {
+  color: var(--color-verde);
+}
+
+@utility eyebrow-terracota {
+  color: var(--color-terracota);
+}
+
+@utility eyebrow-grafite {
+  color: var(--color-grafite);
+}
+
+@utility eyebrow-amarelo {
+  color: var(--color-amarelo);
+}
+
+@utility card-accent-petroleo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-petroleo);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@utility card-accent-verde {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-verde);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@utility card-accent-terracota {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-terracota);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@utility card-accent-amarelo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-amarelo);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+@utility border-input {
+  border-color: var(--color-border-input);
+}
+
+@utility border-subtle {
+  border-color: var(--color-border-subtle);
+}
+
+@utility divider-bar {
+  height: 3px;
+  width: 3rem;
+  margin-top: 0.75rem;
+}
+
+@utility divider-bar-petroleo {
+  background-color: var(--color-petroleo);
+}
+
+@utility divider-bar-verde {
+  background-color: var(--color-verde);
+}
+
+@utility divider-bar-terracota {
+  background-color: var(--color-terracota);
+}
+
+@utility divider-bar-amarelo {
+  background-color: var(--color-amarelo);
+}
+
+@utility cta-contact-info {
+  color: rgba(243, 241, 235, 0.85);
+}

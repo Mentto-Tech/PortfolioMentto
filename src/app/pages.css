@@ -8,6 +8,12 @@
   background-color: var(--color-neutro);
   border-radius: 0.5rem;
   border-left: 4px solid;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.benefit-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .benefit-box-verde {
@@ -46,6 +52,13 @@
   border-radius: 0.5rem;
   background-color: var(--color-branco);
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.publico-page-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 @media (min-width: 768px) {
@@ -99,6 +112,12 @@
   padding: 2rem;
   background-color: var(--color-neutro);
   border-radius: 0.5rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tema-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .tema-card-bar {

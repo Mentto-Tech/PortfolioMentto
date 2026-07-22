@@ -2,10 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { animate } from "framer-motion";
-import type { DOMKeyframesDefinition, AnimationOptions } from "motion-dom";
 import "./site-chrome.css";
 
 export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
@@ -62,19 +59,9 @@ const navItems = [
 ] as const;
 export function Nav() {
   const pathname = usePathname();
-  const headerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = headerRef.current;
-    if (!el) return;
-    const animateEl = (target: Element, kf: DOMKeyframesDefinition, opts: AnimationOptions) =>
-      animate(target as never, kf as never, opts as never);
-    const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
-    animateEl(el, { opacity: [0, 1], y: [-16, 0] }, { duration: 0.7, ease });
-  }, [pathname]);
 
   return (
-    <header ref={headerRef} className="nav-root" style={{ opacity: 0 }}>
+    <header key={pathname} className="nav-root nav-enter">
       <div className="container-mentto nav-inner">
         <Logo tone="dark" />
         <nav className="nav-links">

@@ -41,23 +41,20 @@
 
 :root {
   color-scheme: light;
-}
+  scroll-behavior: smooth;
 
-/* ============================================
-   Animações globais — scroll reveal & transitions
-   ============================================ */
-
-:root {
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-slow: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Base state — elementos que aguardam reveal pelo Framer Motion */
 .reveal, .reveal-section, .reveal-left, .reveal-scale, .reveal-blur {
   opacity: 0;
-  /* O transform inicial será aplicado pelo framer-motion no DOM, 
-     mas podemos manter um fallback leve para evitar FOUC */
+  will-change: opacity, transform, filter;
+  /* O transform inicial será aplicado pelo framer-motion no DOM */
 }
 
 
@@ -100,10 +97,16 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--color-branco);
-    transition: background-color 0.2s;
+    transition: var(--transition-smooth);
 
     &:hover {
-      background-color: rgba(8, 61, 95, 0.85);
+      background-color: rgba(8, 61, 95, 0.88);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(8, 61, 95, 0.15);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 
@@ -116,10 +119,16 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--color-petroleo);
-    transition: background-color 0.2s;
+    transition: var(--transition-smooth);
 
     &:hover {
-      background-color: rgba(8, 61, 95, 0.05);
+      background-color: rgba(8, 61, 95, 0.06);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(8, 61, 95, 0.08);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 
@@ -132,10 +141,16 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--color-grafite);
-    transition: filter 0.2s;
+    transition: var(--transition-smooth);
 
     &:hover {
-      filter: brightness(0.95);
+      filter: brightness(0.96);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(255, 195, 0, 0.35);
+    }
+
+    &:active {
+      transform: translateY(0);
     }
   }
 
@@ -148,10 +163,11 @@
     padding: 0.75rem 1rem;
     color: var(--color-grafite);
     outline: none;
-    transition: border-color 0.2s;
+    transition: var(--transition-fast);
 
     &:focus {
       border-color: var(--color-petroleo);
+      box-shadow: 0 0 0 3px rgba(8, 61, 95, 0.08);
     }
   }
 
@@ -159,12 +175,18 @@
   .cta-contact-link {
     text-decoration: underline;
     text-underline-offset: 4px;
-    transition: color 0.2s;
+    transition: var(--transition-fast);
 
     &:hover {
       color: var(--color-amarelo);
     }
   }
+}
+
+/* Global utility override para garantir que a classe Tailwind .transition seja ultra-suave */
+.transition, .transition-all {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition-duration: 350ms !important;
 }
 
 /* Simple utilities (no pseudo-classes) */

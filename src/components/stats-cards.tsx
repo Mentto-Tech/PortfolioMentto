@@ -37,8 +37,7 @@ function AnimatedNumberCard({
 
   useEffect(() => {
     if (isInView) {
-      let start = 0;
-      const duration = 2000;
+      const duration = 1400;
       const startTime = performance.now();
 
       const animate = (currentTime: number) => {
@@ -65,7 +64,7 @@ function AnimatedNumberCard({
   return (
     <div
       ref={ref}
-      className={`relative overflow-hidden rounded-[20px] p-6 ${gradient} shadow-2xl ${textColor} transform transition-transform hover:-translate-y-1`}
+      className={`relative overflow-hidden rounded-[20px] p-6 ${gradient} ${textColor} transform transition-all duration-350 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5`}
       style={{
         boxShadow: `0 20px 40px -15px ${shadowColor}`,
       }}

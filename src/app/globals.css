@@ -271,6 +271,15 @@
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
+@utility card-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
 @utility border-input {
   border-color: var(--color-border-input);
 }

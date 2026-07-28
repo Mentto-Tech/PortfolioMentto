@@ -63,6 +63,10 @@ function Promessa() {
           <div className="md:col-span-4 reveal-left">
             <span className="eyebrow eyebrow-terracota">Breve história</span>
             <div className="divider-bar divider-bar-terracota" />
+            {/* Espaço reservado para foto */}
+            <div className="mt-8 w-full aspect-[4/3] rounded-lg bg-[#083D5F]/10 border-2 border-dashed border-[#083D5F]/20 flex items-center justify-center">
+              <span className="text-[#083D5F]/40 text-sm font-heading">Foto em breve</span>
+            </div>
           </div>
           <div className="md:col-span-8 reveal stagger-1">
             <h2 className="font-heading font-bold text-[2rem] md:text-[3rem] leading-[1.1] text-[#083D5F]">
@@ -87,7 +91,8 @@ const frentes = [
     name: "ROTA",
     title: "Consultoria estratégica com acompanhamento contínuo",
     desc: "A gente constrói a sua rota — e fica do lado o ano inteiro. Plano e acompanhamento são inseparáveis para que a estratégia saia da gaveta e vire movimento em 4 níveis: Essencial, Gestão, Executivo e Conselho.",
-    accent: "#107F8D",
+    accent: "#083D5F",
+    href: "/rota",
   },
   {
     tag: "Transversal",
@@ -95,6 +100,7 @@ const frentes = [
     title: "Workshops e imersões temáticas",
     desc: "A gente desce fundo no tema — e o time emerge sabendo o que fazer. Imersões de 1 a 2 dias (Ágil, Inovação, Estratégia, Pessoas) de onde o time sai com clareza e plano de ação.",
     accent: "#C25D44",
+    href: "/mergulho",
   },
   {
     tag: "Pesquisa",
@@ -103,13 +109,15 @@ const frentes = [
     desc: "A gente organiza o projeto, alinha as equipes e garante que a inovação avança — dentro dos prazos e exigências. Atuamos como PMO para projetos de pesquisa científica e tecnológica (CCDs, institutos).",
     accent: "#FFC300",
     tagline: "Da pesquisa ao mercado.",
+    href: "/ponte",
   },
   {
     tag: "Tecnologia",
     name: "Mentto Tech Lab",
     title: "Desenvolvimento de soluções digitais",
     desc: "Nosso braço de P&D que pega uma ideia digital presa num protótipo e transforma em produto real no mercado: valida o que falta, constrói pra valer, coloca no ar e fica do lado até funcionar.",
-    accent: "#083D5F",
+    accent: "#107F8D",
+    href: "/tech-lab",
   },
 ];
 
@@ -117,14 +125,14 @@ function Frentes() {
   return (
     <section id="frentes" className="bg-[#F3F1EB] reveal-section">
       <div className="container-mentto py-24 md:py-24">
-        <div className="max-w-3xl reveal">
+        <div className="text-center reveal">
           <span className="eyebrow eyebrow-terracota">O que fazemos</span>
           <h2 className="mt-1 md:mt-2 font-heading font-bold text-[2.25rem] md:text-[3rem] leading-[1.1] text-[#083D5F]">
             Três frentes de trabalho.
             <br />
             Dois públicos: empresa e pesquisa.
           </h2>
-          <p className="mt-6 text-lg text-[#333]/80 max-w-[62ch]">
+          <p className="mt-6 text-lg text-[#333]/80 max-w-[62ch] mx-auto">
             Você não precisa escolher agora em qual entrar — a gente entende
             primeiro, depois direciona. Este é o mapa.
           </p>
@@ -132,18 +140,26 @@ function Frentes() {
 
         <div className="mt-16 grid md:grid-cols-2 gap-6">
           {frentes.map((f, i) => (
-            <article
+            <Link
               key={f.name}
-              className={`frente-card reveal stagger-${(i + 1) as 1|2|3|4}`}
+              href={f.href}
+              className={`frente-card reveal stagger-${(i + 1) as 1|2|3|4} block no-underline`}
             >
-              <div className={`card-accent-${f.accent === "#107F8D" ? "verde" : f.accent === "#FFC300" ? "amarelo" : f.accent === "#083D5F" ? "petroleo" : "terracota"}`} />
+              <div
+                className="card-accent-bar"
+                style={{ backgroundColor: f.accent }}
+              />
               <div className="flex items-baseline justify-between gap-4">
                 <div
-                  className={`eyebrow ${f.accent === "#FFC300" ? "eyebrow-grafite" : f.accent === "#107F8D" ? "eyebrow-verde" : f.accent === "#083D5F" ? "eyebrow-petroleo" : "eyebrow-terracota"}`}
+                  className="eyebrow"
+                  style={{ color: f.accent === "#FFC300" ? "#666" : f.accent }}
                 >
                   {f.tag}
                 </div>
-                <div className="font-heading font-bold text-2xl md:text-[1.75rem] text-[#083D5F] tracking-tight">
+                <div
+                  className="font-heading font-bold text-2xl md:text-[1.75rem] tracking-tight"
+                  style={{ color: f.accent }}
+                >
                   {f.name}
                 </div>
               </div>
@@ -152,40 +168,26 @@ function Frentes() {
               </h3>
               <p className="mt-4 text-[#333]/80 leading-relaxed">{f.desc}</p>
               {f.tagline && (
-                <p className="mt-4 font-heading font-semibold text-[#107F8D]">
+                <p className="mt-4 font-heading font-semibold" style={{ color: f.accent }}>
                   {f.tagline}
                 </p>
               )}
-            </article>
+              <div
+                className="mt-6 inline-flex items-center gap-1.5 font-heading font-semibold text-sm"
+                style={{ color: f.accent }}
+              >
+                Saiba mais
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
-const empresas = [
-  {
-    nome: "Toca Imóveis",
-    cliente: "Mário Colombo Neto, Diretor",
-    depoimento: "Projetos conjuntos com ferramentas de gestão e inovação; mais assertividade e foco na solução dos problemas.",
-  },
-  {
-    nome: "Helda Cervejaria",
-    cliente: "Pedro Palú",
-    depoimento: "Mais clareza, mais estratégia, decisões melhores; repensou a estrutura do negócio e evoluiu como gestor.",
-  },
-  {
-    nome: "ITAL",
-    cliente: "Gisele Anne Camargo, Vice-Diretora",
-    depoimento: "A gestão estruturada permitiu o acompanhamento periódico de metas e resultados, fortalecendo a governança e a transparência das entregas.",
-  },
-  {
-    nome: "Fundação Shunji Nishimura (FSNT)",
-    cliente: "Alberto Honda, Conselheiro",
-    depoimento: "A liderança da Mentto foi fundamental para fazer acontecer o maior programa de transformação digital da região — mais de 20 empresas e 100 profissionais.",
-  }
-];
 
 function Empresas() {
   return (
@@ -201,19 +203,16 @@ function Empresas() {
           </p>
         </div>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-6">
-          {empresas.map((e, i) => (
-            <article
-              key={e.nome}
-              className={`bg-white/[0.08] backdrop-blur-sm rounded-lg p-8 border border-white/15 reveal stagger-${(i + 1) as 1|2|3|4}`}
-            >
-              <div className="font-heading font-bold text-[#FFC300] text-xl mb-1">{e.nome}</div>
-              <div className="text-white/70 text-sm mb-5">{e.cliente}</div>
-              <p className="text-[#F3F1EB]/95 leading-relaxed italic">
-                "{e.depoimento}"
-              </p>
-            </article>
-          ))}
+        {/* Espaço reservado para imagem com logos das empresas */}
+        <div className="mt-16 reveal stagger-1">
+          <div className="w-full rounded-xl bg-white/[0.08] border-2 border-dashed border-white/25 flex flex-col items-center justify-center py-20 gap-4">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden className="opacity-40">
+              <rect x="4" y="10" width="40" height="28" rx="4" stroke="white" strokeWidth="2" />
+              <circle cx="17" cy="22" r="4" stroke="white" strokeWidth="2" />
+              <path d="M4 34l10-8 8 6 8-10 14 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span className="text-white/50 font-heading text-sm">Imagem com logos em breve</span>
+          </div>
         </div>
       </div>
     </section>
@@ -227,16 +226,22 @@ function CTA() {
       <div className="container-mentto relative py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-6">
-            <span className="eyebrow eyebrow-amarelo">
-              Diagnóstico
+            <div className="inline-flex items-center gap-2 bg-[#FFC300] text-[#333] font-heading font-bold text-sm px-4 py-2 rounded-full mb-6">
+              ✦ 100% GRATUITO
+            </div>
+            <span className="eyebrow eyebrow-amarelo block mb-2">
+              O diagnóstico
             </span>
-            <h2 className="mt-1 md:mt-2 font-heading font-bold text-white text-[2rem] md:text-[3rem] leading-[1.05]">
-              Enxergar a empresa como ela é, não como o dono gostaria.
+            <h2 className="font-heading font-bold text-white text-[2rem] md:text-[3rem] leading-[1.05]">
+              Antes de vender qualquer coisa, a gente escuta.
             </h2>
-            <p className="mt-6 text-lg text-[#F3F1EB]/90 max-w-[46ch]">
+            <p className="mt-6 text-lg text-[#F3F1EB]/90 max-w-[46ch] leading-relaxed">
               O diagnóstico é real, sem suavizar a verdade. A conversa começa entendendo, não vendendo. O gargalo não é conhecimento — é presença: alguém que não deixa o plano morrer na gaveta.
             </p>
-            <div className="mt-10 space-y-2 cta-contact-info">
+            <p className="mt-4 text-[#FFC300] font-heading font-semibold text-lg">
+              Sem custo. Sem compromisso. Só a conversa.
+            </p>
+            <div className="mt-8 space-y-2 cta-contact-info">
               <div className="font-heading font-semibold text-white">Mentto</div>
               <div>Pompeia/SP — atende todo o Brasil</div>
               <div>

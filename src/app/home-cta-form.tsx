@@ -29,8 +29,12 @@ export default function HomeCTAForm() {
             />
           </label>
         ))}
+        <label className="form-label">
+          <span className="form-label-text">Conta rapidamente o momento</span>
+          <textarea name="mensagem" rows={3} className="form-input resize-y" />
+        </label>
         <button type="submit" className="form-submit">
-          Pedir meu diagnóstico
+          Pedir meu diagnóstico gratuito
         </button>
         <p className="form-disclaimer">
           A gente responde em até 2 dias úteis. Sem lista, sem newsletter — só

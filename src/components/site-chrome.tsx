@@ -12,12 +12,12 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
       <Image
         src="/logo.png"
         alt=""
-        width={28}
-        height={28}
-        className={`h-7 w-auto object-contain${tone === "light" ? " brightness-0 invert" : ""}`}
+        width={56}
+        height={56}
+        className={`h-16 w-16 object-contain${tone === "light" ? " brightness-0 invert" : ""}`}
         priority
       />
-      <span className="font-heading font-bold text-lg leading-none">Mentto</span>
+      {/* <span className="font-heading font-bold text-lg leading-none">Mentto</span> */}
     </Link>
   );
 }
@@ -95,7 +95,7 @@ export function Footer() {
           </p>
         </div>
         <div className="footer-col-links">
-          <div className="footer-col-title">Frentes</div>
+          <div className="footer-col-title">Serviços</div>
           <div>
             <Link href="/rota" className="footer-link">
               ROTA — planejamento estratégico

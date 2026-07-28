@@ -27,7 +27,7 @@ export default function PonteContatoForm() {
         ))}
         <label className="form-label">
           <span className="form-label-text">
-            Conta sobre o projeto (programa, estágio, desafio)
+            Conte sobre o projeto e como podemos ajudar
           </span>
           <textarea name="mensagem" rows={4} className="form-input resize-y" />
         </label>

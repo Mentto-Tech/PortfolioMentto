@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { SiteShell, PageHeader } from "@/components/site-chrome";
 import PonteContatoForm from "./ponte-form";
 import "../pages.css";
@@ -24,18 +25,21 @@ const cases = [
     programa: "CCD FAPESP",
     desc: "Gestão e acompanhamento de projeto de pesquisa multi-institucional, com equipes de pesquisa, indústria e governo — garantindo entregas dentro dos prazos do programa.",
     color: "border-[#107F8D]",
+    link: "https://ccdcircula.org.br/",
   },
   {
     nome: "Cemasu",
     programa: "Pesquisa e inovação",
     desc: "Organização de projeto, alinhamento de equipes e acompanhamento das metas e indicadores ao longo do ciclo de pesquisa.",
     color: "border-[#FFC300]",
+    link: "https://cemasu.com.br/",
   },
   {
     nome: "PBIS",
     programa: "Projeto de inovação tecnológica",
     desc: "Governança e ritmo de projeto — papéis definidos, ritos de acompanhamento e prestação de contas em dia para os financiadores.",
     color: "border-[#C25D44]",
+    link: "https://pbis.org.br/",
   },
 ];
 
@@ -104,6 +108,31 @@ export default function PontePage() {
         </div>
       </section>
 
+      {/* NOVO: Vale da Morte */}
+      <section className="bg-[#F3F1EB]">
+        <div className="container-mentto py-20 md:py-28">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-heading font-bold text-[2rem] md:text-[2.75rem] leading-[1.1] text-[#083D5F]">
+              Atravessando o Vale da Morte.
+            </h2>
+            <p className="mt-5 text-lg text-[#333]/80 leading-relaxed max-w-[62ch] mx-auto">
+              A pesquisa é promissora, mas escalar e levar ao mercado exige outro ritmo. A Mentto ajuda a estruturar a travessia dos níveis de maturidade (TRL).
+            </p>
+          </div>
+          
+          <div className="mt-12 flex justify-center">
+            <div className="relative w-full max-w-6xl aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+              <Image 
+                src="/vale_morte_mentto.jpeg" 
+                alt="Gráfico do Vale da Morte (TRL) e a travessia da inovação" 
+                fill
+                className="object-cover md:object-contain bg-white"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3ª DOBRA — Cases */}
       <section className="bg-[#083D5F] text-white">
         <div className="container-mentto py-20 md:py-28">
@@ -118,19 +147,40 @@ export default function PontePage() {
             </p>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-14 space-y-6">
             {cases.map((c) => (
               <article
                 key={c.nome}
-                className={`bg-white/[0.08] border border-white/15 rounded-lg p-8 border-l-4 ${c.color}`}
+                className={`case-card-h ${c.color}`}
               >
-                <div className="font-heading font-bold text-[#FFC300] text-xl mb-1">
-                  {c.nome}
+                {/* Logo Placeholder */}
+                <div className="w-24 h-24 shrink-0 rounded-lg bg-white/10 border border-white/20 flex flex-col items-center justify-center text-center">
+                  <span className="text-white/40 font-heading font-bold text-xs">LOGO<br/>{c.nome}</span>
                 </div>
-                <div className="text-white/60 text-xs uppercase tracking-wider font-heading font-semibold mb-5">
-                  {c.programa}
+
+                <div className="flex flex-col">
+                  <div className="font-heading font-bold text-[#FFC300] text-xl md:text-2xl mb-1">
+                    {c.nome}
+                  </div>
+                  <div className="text-white/60 text-xs uppercase tracking-wider font-heading font-semibold mb-4">
+                    {c.programa}
+                  </div>
+                  <p className="text-[#F3F1EB]/90 leading-relaxed max-w-3xl mb-6">{c.desc}</p>
+                  
+                  <div className="mt-auto">
+                    <a href={c.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-white/90 hover:text-white hover:underline underline-offset-4 transition">
+                      Ver site oficial
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M4 10L10 4M10 4H5.5M10 4V8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
-                <p className="text-[#F3F1EB]/90 leading-relaxed">{c.desc}</p>
+
+                {/* Photo Placeholder */}
+                <div className="hidden md:flex w-48 h-full shrink-0 rounded-lg bg-white/5 border border-white/10 items-center justify-center text-center">
+                  <span className="text-white/30 font-heading text-xs">FOTO<br/>DA EQUIPE</span>
+                </div>
               </article>
             ))}
           </div>
@@ -148,12 +198,10 @@ export default function PontePage() {
             <div className="md:col-span-6">
               <span className="eyebrow text-[#FFC300]">Vamos conversar</span>
               <h2 className="mt-1 font-heading font-bold text-white text-[2rem] md:text-[2.75rem] leading-[1.05]">
-                Seu projeto merece alguém que não some no meio.
+                Entender o momento do projeto.
               </h2>
               <p className="mt-6 text-lg text-[#F3F1EB]/90 max-w-[46ch] leading-relaxed">
-                A conversa é gratuita. A gente entende o momento do projeto —
-                sem cardápio, sem pressa de fechar. Se fizer sentido, apresenta
-                o que cabe.
+                Projetos de pesquisa têm dinâmicas únicas. Nossa primeira conversa serve para entender o escopo, as instituições envolvidas e onde estão os desafios de gestão e governança. Não vendemos pacotes prontos — se fizer sentido, desenhamos como apoiar o seu programa.
               </p>
               <div className="mt-8 space-y-2 text-[#F3F1EB]/75 text-sm">
                 <div>Pompeia/SP — atende todo o Brasil</div>

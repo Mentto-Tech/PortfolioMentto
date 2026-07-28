@@ -95,7 +95,7 @@ export default function MergulhoPage() {
       {/* 2ª DOBRA — Como funciona */}
       <section className="bg-white">
         <div className="container-mentto py-20 md:py-28">
-          <div className="grid md:grid-cols-12 gap-12 items-start">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5">
               <span className="eyebrow eyebrow-terracota">Como funciona</span>
               <h2 className="mt-1 font-heading font-bold text-[1.75rem] md:text-[2.5rem] leading-tight text-[#083D5F]">
@@ -107,7 +107,7 @@ export default function MergulhoPage() {
                 material. Sem cardápio fechado.
               </p>
             </div>
-            <div className="md:col-span-7 space-y-5">
+            <div className="md:col-span-7 space-y-4">
               {[
                 {
                   n: "1 a 2 dias",
@@ -130,12 +130,14 @@ export default function MergulhoPage() {
                   c: "border-[#083D5F]",
                 },
               ].map((b) => (
-                <div
-                  key={b.n}
-                  className={`benefit-box border-l-4 ${b.c}`}
-                >
-                  <div className="benefit-box-title">{b.n}</div>
-                  <p className="benefit-box-desc">{b.d}</p>
+                <div key={b.n} className={`hover-card ${b.c}`}>
+                  <div className="hover-card-title">
+                    {b.n}
+                    <svg className="hover-card-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <p className="hover-card-desc">{b.d}</p>
                 </div>
               ))}
             </div>
@@ -146,12 +148,12 @@ export default function MergulhoPage() {
       {/* 3ª DOBRA — Catálogo de temas */}
       <section id="temas" className="bg-[#F3F1EB]">
         <div className="container-mentto py-20 md:py-28">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto text-center">
             <span className="eyebrow eyebrow-petroleo">Catálogo de temas</span>
             <h2 className="mt-1 font-heading font-bold text-[2rem] md:text-[2.75rem] leading-tight text-[#083D5F]">
               Do ágil à estratégia. Do conceito ao plano.
             </h2>
-            <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch]">
+            <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch] mx-auto">
               Todos os temas abaixo já foram entregues pela Mentto. O catálogo é
               aberto — se o tema não estiver aqui, basta conversar.
             </p>

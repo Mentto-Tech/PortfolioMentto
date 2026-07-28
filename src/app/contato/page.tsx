@@ -18,7 +18,59 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <SiteShell>
-      {/* 1ª DOBRA — Destaque do diagnóstico gratuito */}
+      {/* 1ª DOBRA — O que é o diagnóstico */}
+      <section className="bg-[#F3F1EB]">
+        <div className="container-mentto py-20 md:py-28">
+          <div className="max-w-3xl">
+            <span className="eyebrow eyebrow-petroleo">O que é o diagnóstico</span>
+            <h1 className="mt-1 font-heading font-bold text-[2rem] md:text-[2.75rem] leading-tight text-[#083D5F]">
+              O gargalo não é conhecimento. É presença.
+            </h1>
+            <p className="mt-5 text-lg text-[#333]/80 leading-relaxed max-w-[60ch]">
+              Alguém que não deixa o plano morrer na gaveta. Esse é o
+              diferencial real da Mentto — e é exatamente o que o diagnóstico
+              começa a revelar. Foi um cliente que disse melhor do que qualquer
+              slide:{" "}
+              <em>
+                &quot;o que vocês entregam é ajudar no comprometimento das
+                pessoas.&quot;
+              </em>
+            </p>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {[
+              {
+                n: "Reconhecer",
+                d: "Antes de qualquer plano, entender o momento. Pessoas, números, história — sem suavizar a verdade.",
+                c: "border-[#107F8D]",
+                e: "text-[#107F8D]",
+              },
+              {
+                n: "Sem pressa",
+                d: "A gente escuta primeiro, antes de indicar qualquer caminho. Não existe cardápio pronto para vender.",
+                c: "border-[#C25D44]",
+                e: "text-[#C25D44]",
+              },
+              {
+                n: "Gratuito de verdade",
+                d: "Sem custo, sem compromisso. Se fizer sentido avançar, a gente apresenta o que cabe no seu momento.",
+                c: "border-[#FFC300]",
+                e: "text-[#083D5F]",
+              },
+            ].map((b) => (
+              <div key={b.n} className={`bg-white rounded-lg p-7 border-l-4 ${b.c}`}>
+                <div className={`font-heading font-bold text-base ${b.e} uppercase tracking-wide text-xs mb-3`}>
+                  {b.n}
+                </div>
+                <p className="text-[#333]/75 leading-relaxed">{b.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2ª DOBRA — Destaque do diagnóstico gratuito e formulário */}
       <section className="hero-radial relative overflow-hidden text-white">
         <ChevronPattern className="absolute inset-0 h-full w-full text-white/[0.08]" />
         <div className="container-mentto relative py-20 md:py-28">
@@ -32,9 +84,9 @@ export default function ContatoPage() {
               <span className="eyebrow eyebrow-amarelo block mb-2">
                 Diagnóstico
               </span>
-              <h1 className="font-heading font-bold text-white text-[2.25rem] md:text-[3.25rem] leading-[1.05]">
+              <h2 className="font-heading font-bold text-white text-[2.25rem] md:text-[3.25rem] leading-[1.05]">
                 Antes de vender qualquer coisa, a gente escuta.
-              </h1>
+              </h2>
               <p className="mt-6 text-lg text-[#F3F1EB]/90 max-w-[48ch] leading-relaxed">
                 Uma conversa curta para enxergar a empresa como ela é — não
                 como o dono gostaria. Sem cardápio, sem pressa de fechar. O
@@ -81,58 +133,6 @@ export default function ContatoPage() {
             <div className="md:col-span-6">
               <ContatoForm />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2ª DOBRA — O que é o diagnóstico */}
-      <section className="bg-[#F3F1EB]">
-        <div className="container-mentto py-20 md:py-24">
-          <div className="max-w-3xl">
-            <span className="eyebrow eyebrow-petroleo">O que é o diagnóstico</span>
-            <h2 className="mt-1 font-heading font-bold text-[1.75rem] md:text-[2.5rem] leading-tight text-[#083D5F]">
-              O gargalo não é conhecimento. É presença.
-            </h2>
-            <p className="mt-5 text-lg text-[#333]/80 leading-relaxed max-w-[60ch]">
-              Alguém que não deixa o plano morrer na gaveta. Esse é o
-              diferencial real da Mentto — e é exatamente o que o diagnóstico
-              começa a revelar. Foi um cliente que disse melhor do que qualquer
-              slide:{" "}
-              <em>
-                &quot;o que vocês entregam é ajudar no comprometimento das
-                pessoas.&quot;
-              </em>
-            </p>
-          </div>
-
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            {[
-              {
-                n: "Reconhecer",
-                d: "Antes de qualquer plano, entender o momento. Pessoas, números, história — sem suavizar a verdade.",
-                c: "border-[#107F8D]",
-                e: "text-[#107F8D]",
-              },
-              {
-                n: "Sem pressa",
-                d: "A gente escuta primeiro, antes de indicar qualquer caminho. Não existe cardápio pronto para vender.",
-                c: "border-[#C25D44]",
-                e: "text-[#C25D44]",
-              },
-              {
-                n: "Gratuito de verdade",
-                d: "Sem custo, sem compromisso. Se fizer sentido avançar, a gente apresenta o que cabe no seu momento.",
-                c: "border-[#FFC300]",
-                e: "text-[#083D5F]",
-              },
-            ].map((b) => (
-              <div key={b.n} className={`bg-white rounded-lg p-7 border-l-4 ${b.c}`}>
-                <div className={`font-heading font-bold text-base ${b.e} uppercase tracking-wide text-xs mb-3`}>
-                  {b.n}
-                </div>
-                <p className="text-[#333]/75 leading-relaxed">{b.d}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

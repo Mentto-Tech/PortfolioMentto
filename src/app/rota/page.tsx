@@ -99,7 +99,7 @@ export default function RotaPage() {
 
       {/* 2ª DOBRA — Para quem é + benefícios */}
       <section className="bg-white">
-        <div className="container-mentto py-20 md:py-28 grid md:grid-cols-12 gap-12">
+        <div className="container-mentto py-20 md:py-28 grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
             <span className="eyebrow eyebrow-verde">Para quem é</span>
             <div className="divider-bar divider-bar-verde" />
@@ -112,28 +112,37 @@ export default function RotaPage() {
               lado, não por cima.
             </p>
           </div>
-          <div className="md:col-span-7 space-y-6">
+          <div className="md:col-span-7 space-y-4">
             {[
               {
                 t: "Diagnóstico honesto",
                 d: "Antes de qualquer plano, entender o momento. Pessoas, números, história — sem suavizar a verdade.",
+                c: "border-[#107F8D]",
               },
               {
                 t: "Foco, não volume",
                 d: "Poucas prioridades, com dono e prazo. O que importa, na ordem certa.",
+                c: "border-[#C25D44]",
               },
               {
                 t: "Ritmo de tração",
                 d: "Ritual curto e frequente. A gaveta a gente conhece — e não deixa o plano cair nela.",
+                c: "border-[#FFC300]",
               },
               {
                 t: "Presença contínua",
                 d: "Enquanto o plano acontece, a Mentto continua do lado. Todo o ano.",
+                c: "border-[#083D5F]",
               },
             ].map((b) => (
-              <div key={b.t} className="benefit-box benefit-box-verde">
-                <div className="benefit-box-title">{b.t}</div>
-                <p className="benefit-box-desc">{b.d}</p>
+              <div key={b.t} className={`hover-card ${b.c}`}>
+                <div className="hover-card-title">
+                  {b.t}
+                  <svg className="hover-card-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <p className="hover-card-desc">{b.d}</p>
               </div>
             ))}
           </div>
@@ -143,12 +152,12 @@ export default function RotaPage() {
       {/* 3ª DOBRA — O Método R·O·T·A */}
       <section className="bg-[#F3F1EB]">
         <div className="container-mentto py-20 md:py-28">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto text-center">
             <span className="eyebrow eyebrow-verde">O método</span>
             <h2 className="mt-1 font-heading font-bold text-[2rem] md:text-[2.75rem] leading-[1.1] text-[#083D5F]">
               R·O·T·A
             </h2>
-            <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch]">
+            <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch] mx-auto">
               Um único caminho atravessa tudo que a Mentto faz. O que muda é o
               escopo e o cliente — nunca o &quot;não largar no meio do
               caminho&quot;.
@@ -186,14 +195,14 @@ export default function RotaPage() {
       {/* 4ª DOBRA — Os 4 níveis */}
       <section className="bg-white">
         <div className="container-mentto py-20 md:py-28">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto text-center">
             <span className="eyebrow eyebrow-petroleo">Os níveis do ROTA</span>
             <h2 className="mt-1 font-heading font-bold text-[2rem] md:text-[2.75rem] leading-[1.1] text-[#083D5F]">
               Uma escada clara.
               <br />
               Você entra no nível certo.
             </h2>
-            <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch]">
+            <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch] mx-auto">
               Qual nível cabe no seu momento é conversa — a gente entende
               primeiro, depois indica.
             </p>

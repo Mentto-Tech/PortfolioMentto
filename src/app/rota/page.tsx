@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SiteShell, PageHeader, ChevronPattern } from "@/components/site-chrome";
+import { SiteShell, PageHeader } from "@/components/site-chrome";
 import DiagnosticoForm from "../diagnostico-form";
 import "../pages.css";
 import "../contato/contato.css";
@@ -231,7 +231,6 @@ export default function RotaPage() {
 
       {/* 5ª DOBRA — Diagnóstico gratuito */}
       <section className="relative overflow-hidden hero-radial text-white">
-        <ChevronPattern className="absolute inset-0 h-full w-full text-white/[0.08]" />
         <div className="container-mentto relative py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-6">

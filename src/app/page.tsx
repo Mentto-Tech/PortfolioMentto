@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Nav, Footer, ChevronPattern } from "@/components/site-chrome";
+import Image from "next/image";
+import { Nav, Footer } from "@/components/site-chrome";
 import HomeCTAForm from "./home-cta-form";
 import { StatsCards } from "@/components/stats-cards";
 import "./home.css";
@@ -8,7 +9,6 @@ import "./home.css";
 function Hero() {
   return (
     <section className="hero-radial relative overflow-hidden text-white">
-      <ChevronPattern className="absolute inset-0 h-full w-full text-white/10" />
       <div className="container-mentto relative py-24">
         <div className="max-w-4xl">
           <span className="eyebrow text-[#FFC300] reveal">
@@ -203,16 +203,14 @@ function Empresas() {
           </p>
         </div>
 
-        {/* Espaço reservado para imagem com logos das empresas */}
         <div className="mt-16 reveal stagger-1">
-          <div className="w-full rounded-xl bg-white/[0.08] border-2 border-dashed border-white/25 flex flex-col items-center justify-center py-20 gap-4">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden className="opacity-40">
-              <rect x="4" y="10" width="40" height="28" rx="4" stroke="white" strokeWidth="2" />
-              <circle cx="17" cy="22" r="4" stroke="white" strokeWidth="2" />
-              <path d="M4 34l10-8 8 6 8-10 14 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="text-white/50 font-heading text-sm">Imagem com logos em breve</span>
-          </div>
+          <Image
+            src="/EmpresasQueJaAtendemos.png"
+            alt="Empresas que já passaram pela Mentto"
+            width={1200}
+            height={400}
+            className="w-full rounded-xl"
+          />
         </div>
       </div>
     </section>
@@ -222,7 +220,6 @@ function Empresas() {
 function CTA() {
   return (
     <section id="contato" className="hero-radial relative overflow-hidden text-white reveal-section">
-      <ChevronPattern className="absolute inset-0 h-full w-full text-white/[0.08]" />
       <div className="container-mentto relative py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-6">

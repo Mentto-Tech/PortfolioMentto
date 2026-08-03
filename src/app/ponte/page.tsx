@@ -25,6 +25,7 @@ const cases = [
     programa: "CCD FAPESP",
     desc: "Gestão e acompanhamento de projeto de pesquisa multi-institucional, com equipes de pesquisa, indústria e governo — garantindo entregas dentro dos prazos do programa.",
     color: "border-[#107F8D]",
+    logo: "/CCD_Circula.png",
     link: "https://ccdcircula.org.br/",
   },
   {
@@ -32,6 +33,7 @@ const cases = [
     programa: "Pesquisa e inovação",
     desc: "Organização de projeto, alinhamento de equipes e acompanhamento das metas e indicadores ao longo do ciclo de pesquisa.",
     color: "border-[#FFC300]",
+    logo: "/CCD_Cemasu.png",
     link: "https://cemasu.com.br/",
   },
   {
@@ -39,6 +41,7 @@ const cases = [
     programa: "Projeto de inovação tecnológica",
     desc: "Governança e ritmo de projeto — papéis definidos, ritos de acompanhamento e prestação de contas em dia para os financiadores.",
     color: "border-[#C25D44]",
+    logo: "/CCD_PBIS.png",
     link: "https://pbis.org.br/",
   },
 ];
@@ -153,9 +156,15 @@ export default function PontePage() {
                 key={c.nome}
                 className={`case-card-h ${c.color}`}
               >
-                {/* Logo Placeholder */}
-                <div className="w-24 h-24 shrink-0 rounded-lg bg-white/10 border border-white/20 flex flex-col items-center justify-center text-center">
-                  <span className="text-white/40 font-heading font-bold text-xs">LOGO<br/>{c.nome}</span>
+                {/* Logo */}
+                <div className="w-24 h-24 shrink-0 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={c.logo}
+                    alt={`Logo ${c.nome}`}
+                    width={88}
+                    height={88}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
 
                 <div className="flex flex-col">

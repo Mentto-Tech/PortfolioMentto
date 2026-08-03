@@ -198,9 +198,10 @@
 }
 
 @utility hero-radial {
-  background:
-    radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.08), transparent 60%),
-    var(--color-petroleo);
+  background-image: url("/background_azul.png");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-petroleo);
 }
 
 @utility eyebrow {

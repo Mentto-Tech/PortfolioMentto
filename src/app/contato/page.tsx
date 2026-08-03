@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SiteShell, ChevronPattern } from "@/components/site-chrome";
+import { SiteShell } from "@/components/site-chrome";
 import ContatoForm from "./form";
 import "./contato.css";
 
@@ -72,7 +72,6 @@ export default function ContatoPage() {
 
       {/* 2ª DOBRA — Destaque do diagnóstico gratuito e formulário */}
       <section className="hero-radial relative overflow-hidden text-white">
-        <ChevronPattern className="absolute inset-0 h-full w-full text-white/[0.08]" />
         <div className="container-mentto relative py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-6">

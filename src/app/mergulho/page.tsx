@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SiteShell, ChevronPattern } from "@/components/site-chrome";
+import { SiteShell } from "@/components/site-chrome";
 import DiagnosticoForm from "../diagnostico-form";
 import "../pages.css";
 import "../contato/contato.css";
@@ -61,7 +61,6 @@ export default function MergulhoPage() {
     <SiteShell>
       {/* 1ª DOBRA — Hero */}
       <section className="hero-radial relative overflow-hidden text-white">
-        <ChevronPattern className="absolute inset-0 h-full w-full text-white/10" />
         <div className="container-mentto relative py-28 md:py-36">
           <div className="max-w-4xl">
             <span className="eyebrow text-[#FFC300]">Transversal · MERGULHO</span>
@@ -230,7 +229,6 @@ export default function MergulhoPage() {
 
       {/* 5ª DOBRA — Diagnóstico gratuito + formulário */}
       <section id="diagnostico" className="relative overflow-hidden hero-radial text-white">
-        <ChevronPattern className="absolute inset-0 h-full w-full text-white/[0.08]" />
         <div className="container-mentto relative py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-6">

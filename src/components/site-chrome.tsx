@@ -158,7 +158,6 @@ export function PageHeader({
 }) {
   return (
     <section className="hero-radial page-header page-header-enter reveal-section">
-      <ChevronPattern className="absolute inset-0 h-full w-full text-white/10" />
       <div className="container-mentto page-header-inner">
         <span className={`eyebrow ${eyebrowColor} reveal`}>{eyebrow}</span>
         <h1 className="mt-5 font-heading font-bold leading-[1.05] tracking-tight text-white text-[2.25rem] sm:text-[3rem] md:text-[3.75rem] max-w-4xl reveal stagger-1">

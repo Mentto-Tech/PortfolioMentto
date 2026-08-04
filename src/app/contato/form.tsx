@@ -1,17 +1,26 @@
 "use client";
 
 import "./contato.css";
+import { useContactForm } from "@/lib/use-contact-form";
 
 type Props = {
   assunto?: string;
 };
 
 export default function ContatoForm({ assunto }: Props) {
+  const { status, handleSubmit } = useContactForm("contato");
+
+  if (status === "success") {
+    return (
+      <div className="form-card text-center py-10">
+        <p className="text-xl font-heading font-bold text-[#083D5F]">Mensagem enviada!</p>
+        <p className="mt-2 text-[#333]/70">A gente responde em até 2 dias úteis.</p>
+      </div>
+    );
+  }
+
   return (
-    <form
-      className="form-card"
-      onSubmit={(e) => e.preventDefault()}
-    >
+    <form className="form-card" onSubmit={handleSubmit}>
       <div className="form-grid">
         {[
           { label: "Nome", type: "text", name: "nome" },
@@ -21,12 +30,7 @@ export default function ContatoForm({ assunto }: Props) {
         ].map((f) => (
           <label key={f.name} className="form-label">
             <span className="form-label-text">{f.label}</span>
-            <input
-              type={f.type}
-              name={f.name}
-              required
-              className="form-input"
-            />
+            <input type={f.type} name={f.name} required className="form-input" />
           </label>
         ))}
 
@@ -43,18 +47,19 @@ export default function ContatoForm({ assunto }: Props) {
 
         <label className="form-label">
           <span className="form-label-text">Conta rapidamente o momento</span>
-          <textarea
-            name="mensagem"
-            rows={4}
-            className="form-input resize-y"
-          />
+          <textarea name="mensagem" rows={4} className="form-input resize-y" />
         </label>
-        <button type="submit" className="form-submit">
-          Enviar mensagem
+
+        <button type="submit" className="form-submit" disabled={status === "loading"}>
+          {status === "loading" ? "Enviando..." : "Enviar mensagem"}
         </button>
+
+        {status === "error" && (
+          <p className="text-red-500 text-sm">Algo deu errado. Tente novamente ou mande um email direto.</p>
+        )}
+
         <p className="form-disclaimer">
-          A gente responde em até 2 dias úteis. Sem lista, sem newsletter — só
-          a conversa.
+          A gente responde em até 2 dias úteis. Sem lista, sem newsletter — só a conversa.
         </p>
       </div>
     </form>

@@ -53,9 +53,8 @@ export function ChevronPattern({ className = "" }: { className?: string }) {
 
 const navItems = [
   { href: "/", label: "Início" },
-  { href: "/rota", label: "ROTA" },
-  { href: "/mergulho", label: "Mergulho" },
-  { href: "/ponte", label: "Ponte pesquisa" },
+  { href: "/estrategia-e-negocio", label: "Estratégia e Negócio" },
+  { href: "/pesquisa-e-inovacao", label: "Pesquisa e Inovação" },
 ] as const;
 export function Nav() {
   const pathname = usePathname();
@@ -76,7 +75,7 @@ export function Nav() {
           ))}
         </nav>
         <Link href="/contato" className="nav-cta">
-          Contato
+          Falar com a Mentto
         </Link>
       </div>
     </header>

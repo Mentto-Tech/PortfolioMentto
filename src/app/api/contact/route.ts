@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: process.env.RESEND_FROM as string,
       to: RECIPIENTS,
-      reply_to: email,
+      replyTo: email,
       subject: assunto,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto">

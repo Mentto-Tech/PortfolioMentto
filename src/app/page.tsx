@@ -208,7 +208,7 @@ function Logos() {
       <div className="container-mentto">
         <p className="home-logos-label">Empresas e instituições que já trabalharam com a Mentto</p>
         <Image
-          src="/EmpresasQueJaAtendemos.png"
+          src="/EmpresasQueJaAtendemos.jpeg"
           alt="Empresas e instituições que já trabalharam com a Mentto"
           width={1200}
           height={300}

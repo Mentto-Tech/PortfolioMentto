@@ -160,7 +160,7 @@ function Hero() {
               Junto <span style={{ color: 'var(--color-amarelo)' }}>até virar resultado.</span>
             </h1>
             <p className="home-hero-lede">
-              A Mentto transforma estratégia em rotina de gestão — para empresas e para
+              A Mentto transforma estratégia em rotina de gestão, para empresas e para
               projetos de pesquisa e inovação.
             </p>
             <div className="home-hero-ctas">
@@ -254,7 +254,7 @@ function OQueTrava() {
                 <em>Harvard Business Review, 2018</em>
               </li>
               <li>
-                <strong>Metade das empresas que fecham têm causa interna —</strong>{" "}
+                <strong>Metade das empresas que fecham têm causa interna,</strong>{" "}
                 planejamento, gestão e caixa. Não foi o mercado.{" "}
                 <em>Sebrae, 2024</em>
               </li>
@@ -276,7 +276,7 @@ function OQueTrava() {
               </li>
               <li>
                 <strong>Resultado técnico não é entrega de projeto.</strong>{" "}
-                A tecnologia amadurece, mas o projeto precisa de gestão para virar entrega — e depois, mercado.
+                A tecnologia amadurece, mas o projeto precisa de gestão para virar entrega, e depois, mercado.
               </li>
             </ul>
           </div>
@@ -358,7 +358,7 @@ function PorOndeEntra() {
             <span className="home-entrada-product home-entrada-product--rota">ROTA</span>
             <p className="home-entrada-body">
               Para empresa em que liderança, decisão e execução andam juntas. Começa por um planejamento
-              estratégico construído com a liderança — e continua o ano inteiro.
+              estratégico construído com a liderança, e continua o ano inteiro.
             </p>
             <ul className="home-entrada-list">
               <li>Rumo, prioridades e metas definidos com a liderança</li>
@@ -389,7 +389,7 @@ function PorOndeEntra() {
               esperando entrega. No meio acadêmico e em áreas de P&amp;D.
             </p>
             <ul className="home-entrada-list">
-              <li>Governança clara — papéis, ritos e decisões</li>
+              <li>Governança clara, papéis, ritos e decisões</li>
               <li>Transparência, não vigilância: cada frente responde pelo que combinou</li>
               <li>Visível o quanto a tecnologia amadureceu, com evidência</li>
               <li>Prestação de contas em dia, sem consumir o tempo técnico</li>
@@ -420,17 +420,17 @@ function PorOndeEntra() {
 const diferenciais = [
   {
     icon: Users,
-    title: "Construído com a liderança — não entregue a ela.",
+    title: "Construído com a liderança, não entregue a ela.",
     desc: "Prioridades, metas e iniciativas saem de dentro, com quem conhece o negócio e vai sustentar as decisões. Ninguém recebe um diagnóstico pronto para assinar.",
   },
   {
     icon: CalendarCheck,
-    title: "Presença na rotina — não visita mensal.",
-    desc: "A estratégia entra na agenda, nos indicadores e nas decisões do dia a dia — não numa reunião de status a cada trinta dias.",
+    title: "Presença na rotina, não visita mensal.",
+    desc: "A estratégia entra na agenda, nos indicadores e nas decisões do dia a dia, não numa reunião de status a cada trinta dias.",
   },
   {
     icon: FileText,
-    title: "O plano é o começo — não a entrega final.",
+    title: "O plano é o começo, não a entrega final.",
     desc: "Objetivos ganham responsáveis, prazos e cadência. O contrato é de acompanhamento; o documento é só o ponto de partida dele.",
   },
 ];
@@ -477,12 +477,12 @@ function Mergulho() {
             <p className="home-mergulho-product">MERGULHO</p>
             <p className="home-mergulho-body">
               Um a dois dias, presencial, com o seu time,
-              no tema que está travando agora — planejamento, OKR, governança, liderança, gestão ágil,
+              no tema que está travando agora, planejamento, OKR, governança, liderança, gestão ágil,
               IA nos negócios. Você sai com trabalho feito, não com teoria.
             </p>
             <p className="home-mergulho-body">
               Um ano é um passo grande; um dia é um passo curto. Por isso boa parte de quem entra no ROTA
-              começou por aqui — e quem já é cliente contrata um MERGULHO quando precisa destravar um tema
+              começou por aqui, e quem já é cliente contrata um MERGULHO quando precisa destravar um tema
               específico com o time.
             </p>
             <Link href="/mergulho" className="home-entrada-btn" style={{ marginTop: "1.5rem" }}>
@@ -495,14 +495,15 @@ function Mergulho() {
 
           {/* coluna direita */}
           <div className="home-mergulho-right">
-            {/* placeholder de foto */}
-            <div className="home-mergulho-photo">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden className="home-mergulho-photo-icon">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="13" r="4" stroke="currentColor" strokeWidth="1.5"/>
-              </svg>
-              <p className="home-mergulho-photo-label">Um MERGULHO acontecendo</p>
-              <p className="home-mergulho-photo-caption">time em roda, post-its na parede, gente de pé trabalhando</p>
+            {/* foto */}
+            <div className="home-mergulho-photo" style={{ padding: 0, overflow: 'hidden' }}>
+              <Image
+                src="/MenttoMergulho 1.png"
+                alt="Um MERGULHO acontecendo"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* lista */}
@@ -522,25 +523,25 @@ function Mergulho() {
 // ── CASES ───────────────────────────────────────────────────
 const cases = [
   {
-    categoria: "Programa de inovação",
-    situacao: "[situação encontrada — 2 linhas]",
-    trabalho: "[o trabalho, em linguagem concreta — 2 linhas]",
-    resultado: "[o que mudou depois]",
-    instituicao: "[instituição]",
+    categoria: "InovaSkill",
+    situacao: "Empresas tinham desafios de inovação, mas precisavam de uma metodologia para transformá-los em soluções viáveis.",
+    trabalho: "Conduziu a gestão do programa, apoiando empresas e alunos com metodologias de inovação, acompanhamento dos squads e mentorias.",
+    resultado: "Empresas passaram a desenvolver soluções inovadoras com equipes multidisciplinares, reduzindo riscos e acelerando a validação de novos produtos e processos.",
+    instituicao: "Fundação Shunji Nishimura de Tecnologia",
   },
   {
-    categoria: "Centro de pesquisa e desenvolvimento",
-    situacao: "[situação encontrada — 2 linhas]",
-    trabalho: "[o trabalho, em linguagem concreta — 2 linhas]",
-    resultado: "[o que mudou depois]",
-    instituicao: "[instituição]",
+    categoria: "CCD Circula",
+    situacao: "Projetos de pesquisa exigiam maior organização, integração entre equipes e acompanhamento das entregas.",
+    trabalho: "Aplicou metodologias de gestão, criou rotinas de acompanhamento e fortaleceu a governança do projeto.",
+    resultado: "Pesquisadores ganharam mais clareza sobre prioridades, prazos e entregas, fortalecendo a execução do projeto.",
+    instituicao: "CCD Circula",
   },
   {
-    categoria: "Planejamento estratégico em escala",
-    situacao: "[situação encontrada — 2 linhas]",
-    trabalho: "[planejamento estratégico com mais de 25 empresas — o trabalho que deu origem ao método do ROTA]",
-    resultado: "[o que mudou depois]",
-    instituicao: "[programa / instituição contratante]",
+    categoria: "ASSERTI",
+    situacao: "Empresas precisavam estruturar seu planejamento estratégico para crescer com mais direção e previsibilidade.",
+    trabalho: "Conduziu o planejamento estratégico de mais de 25 empresas, consolidando a metodologia que deu origem ao ROTA.",
+    resultado: "Empresas passaram a tomar decisões mais estratégicas, com prioridades claras e planos de ação estruturados.",
+    instituicao: "Impacto360 · Asserti",
   },
 ];
 
@@ -564,9 +565,9 @@ function Cases() {
                 <dd>{c.situacao}</dd>
                 <dt>O que a Mentto fez</dt>
                 <dd>{c.trabalho}</dd>
+                <dt>O que mudou depois</dt>
+                <dd>{c.resultado}</dd>
               </dl>
-              <div className="home-case-divider" />
-              <p className="home-case-resultado">{c.resultado}</p>
               <p className="home-case-inst">{c.instituicao}</p>
             </div>
           ))}
@@ -586,10 +587,10 @@ function Cases() {
 
 // ── DEPOIMENTOS ─────────────────────────────────────────────
 const depoimentos = [
-  { tipo: "Consultoria com acompanhamento", texto: "[COLAR AQUI o depoimento]", nome: "Pedro Palú",          empresa: "Helda Cervejaria" },
-  { tipo: "Projeto de pesquisa",            texto: "[COLAR AQUI o depoimento]", nome: "Gisele Anne Camargo", empresa: "Vice-Diretora, ITAL" },
-  { tipo: "Programa de inovação",           texto: "[COLAR AQUI o depoimento]", nome: "Elvis Fusco",         empresa: "[cargo · instituição]" },
-  { tipo: "Workshop",                       texto: "[COLAR AQUI o depoimento]", nome: "[Nome]",              empresa: "[empresa que fez um MERGULHO]" },
+  { tipo: "Parceria em projetos", texto: "Fizemos projetos juntos onde aprendemos novas ferramentas de gestão e inovação, acrescentando maior assertividade e foco na solução dos problemas.", nome: "Mário Colombo Neto", empresa: "Diretor · Toca Imóveis" },
+  { tipo: "Consultoria com acompanhamento", texto: "A Mentoria me trouxe mais clareza, mais estratégia e decisões melhores. Me fez repensar a estrutura do negócio e evoluir como gestor.", nome: "Pedro Palú", empresa: "Helda Cervejaria" },
+  { tipo: "Projeto de pesquisa", texto: "A gestão estruturada permitiu o acompanhamento periódico de metas e resultados, fortalecendo a governança e a transparência das entregas.", nome: "Gisele Anne Camargo", empresa: "Vice-Diretora · ITAL" },
+  { tipo: "Programa de inovação", texto: "A liderança da Mentto foi fundamental para fazer acontecer o maior programa de transformação digital da região.", nome: "Alberto Honda", empresa: "Conselheiro · Fundação Shunji Nishimura de Tecnologia" },
 ];
 
 function Depoimentos() {
@@ -602,7 +603,6 @@ function Depoimentos() {
         <div className="home-depo-grid">
           {depoimentos.map((d, i) => (
             <div key={i} className="home-depo-card-wrap">
-              <span className="home-depo-badge">A preencher</span>
               <div className="home-depo-card">
                 <svg className="home-depo-quote" width="24" height="20" viewBox="0 0 24 20" fill="none" aria-hidden>
                   <path d="M0 20V12.5C0 5.596 4.156 1.48 12.469 0l1.093 1.875C9.61 3.073 7.5 5.615 7.031 9.375H11V20H0zm13 0V12.5C13 5.596 17.156 1.48 25.469 0l1.093 1.875C22.61 3.073 20.5 5.615 20.031 9.375H24V20H13z" fill="currentColor"/>
@@ -632,10 +632,9 @@ function Depoimentos() {
 
 // ── TIME ─────────────────────────────────────────────────────
 const time = [
-  { nome: "[Nome]", cargo: "[Cargo · formação]" },
-  { nome: "[Nome]", cargo: "[Cargo · formação]" },
-  { nome: "[Nome]", cargo: "[Cargo · formação]" },
-  { nome: "[Nome]", cargo: "[Cargo · formação]" },
+  { nome: "Tiago Goulart", cargo: "CEO e Fundador", foto: "/MenttoTiago.png" },
+  { nome: "Christopher Tsen", cargo: "Gerente Comercial e Sócio", foto: "/MenttoChris.png" },
+  { nome: "Hugo Butarelli", cargo: "Gerente Operacional e Sócio", foto: "/MenttoHugo.png" },
 ];
 
 function Time() {
@@ -647,10 +646,10 @@ function Time() {
           <h2 className="home-section-h2">Gente que você vai gostar de ter por perto.</h2>
           <div className="home-section-rule" />
           <p className="home-time-lede">
-            Gente próxima, técnica e fácil de trabalhar junto — a mesma que entendeu o seu
+            Gente próxima, técnica e fácil de trabalhar junto, a mesma que entendeu o seu
             contexto na primeira conversa e continua ali no décimo mês. A ideia é simples: quando a
             Mentto chega, você fica mais tranquilo, porque agora tem quem resolva junto.
-            Somos do interior de São Paulo e atendemos todo o Brasil — a proximidade é escolha,
+            Somos do interior de São Paulo e atendemos todo o Brasil, a proximidade é escolha,
             não limitação. A base fica no CITAP, o primeiro ambiente de inovação credenciado da
             região, em Pompeia.
           </p>
@@ -659,10 +658,13 @@ function Time() {
           {time.map((m, i) => (
             <div key={i} className="home-time-card">
               <div className="home-time-avatar">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="12" cy="13" r="4" stroke="currentColor" strokeWidth="1.5"/>
-                </svg>
+                <Image
+                  src={m.foto}
+                  alt={m.nome}
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               <strong className="home-time-nome">{m.nome}</strong>
               <span className="home-time-cargo">{m.cargo}</span>
@@ -682,11 +684,11 @@ const faqs = [
   },
   {
     q: "Já contratei consultoria e não deu em nada. Por que seria diferente?",
-    a: "Porque na maioria das vezes o que você contratou foi um diagnóstico e um plano — e o plano dependia do seu time executar sozinho, no meio da urgência. Aqui o acompanhamento não é o extra: é o contrato. A cadência de encontros está escrita nele.",
+    a: "Porque na maioria das vezes o que você contratou foi um diagnóstico e um plano, e o plano dependia do seu time executar sozinho, no meio da urgência. Aqui o acompanhamento não é o extra: é o contrato. A cadência de encontros está escrita nele.",
   },
   {
     q: "Quanto tempo o meu time vai gastar com isso?",
-    a: "Encontros de acompanhamento com cadência fixa e hora marcada, mais o trabalho que já era do time — só que agora priorizado. A Mentto não cria comitê, não pede relatório extra e não convoca reunião fora do combinado.",
+    a: "Encontros de acompanhamento com cadência fixa e hora marcada, mais o trabalho que já era do time, só que agora priorizado. A Mentto não cria comitê, não pede relatório extra e não convoca reunião fora do combinado.",
   },
   {
     q: "Vou ficar dependente de vocês?",
@@ -729,7 +731,7 @@ function TambemFazParte() {
             <Wrench size={28} className="home-tambem-icon" aria-hidden />
             <p className="home-tambem-product">Projetos sob medida</p>
             <p className="home-tambem-desc">
-              Quando o desafio não cabe num formato pronto — estruturar uma área de inovação
+              Quando o desafio não cabe num formato pronto, estruturar uma área de inovação
               dentro da empresa, por exemplo.
             </p>
             <Link href="#contato" className="home-entrada-btn">
@@ -753,7 +755,7 @@ function CTA() {
             <h2 className="home-cta-claim">Conta a sua situação. A gente escuta antes de propor qualquer coisa.</h2>
             <p className="home-cta-body">
               Nada de cardápio pronto e nada de proposta genérica.
-              A gente entende o seu caso primeiro e desenha o caminho a partir dele — se não for a
+              A gente entende o seu caso primeiro e desenha o caminho a partir dele, se não for a
               hora, a gente também fala.
             </p>
             <p className="home-cta-steps-label">Como começa</p>
@@ -764,7 +766,7 @@ function CTA() {
               </li>
               <li>
                 <div className="home-cta-step-head"><span>2</span><strong>A gente conversa.</strong></div>
-                <p>Uma reunião para entender o momento e o contexto — sem apresentação de slides.</p>
+                <p>Uma reunião para entender o momento e o contexto, sem apresentação de slides.</p>
               </li>
               <li>
                 <div className="home-cta-step-head"><span>3</span><strong>Você recebe uma proposta.</strong></div>
@@ -772,11 +774,9 @@ function CTA() {
               </li>
             </ol>
             <div className="home-cta-contact">
-              <span>Pompeia/SP — atende todo o Brasil</span>
+              <span>Pompeia/SP, atende todo o Brasil</span>
               <span>
                 <a href="mailto:contato@mentto.com.br" className="cta-contact-link">contato@mentto.com.br</a>
-                {" · "}
-                <a href="tel:+5514981756771" className="cta-contact-link">(14) 98175-6771</a>
               </span>
             </div>
           </div>

@@ -124,11 +124,11 @@ export function Footer() {
               contato@mentto.com.br
             </a>
           </div>
-          <div>
+          {/* <div>
             <a href="tel:+5514981756771" className="footer-link-underline">
               (14) 98175-6771
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footer-bottom">

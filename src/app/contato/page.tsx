@@ -21,14 +21,14 @@ export default function ContatoPage() {
       {/* 1ª DOBRA — O que é o diagnóstico */}
       <section className="bg-[#F3F1EB]">
         <div className="container-mentto py-20 md:py-28">
-          <div className="max-w-3xl">
+          <div className="mx-auto text-center">
             <span className="eyebrow eyebrow-petroleo">O que é o diagnóstico</span>
             <h1 className="mt-1 font-heading font-bold text-[2rem] md:text-[2.75rem] leading-tight text-[#083D5F]">
               O gargalo não é conhecimento. É presença.
             </h1>
-            <p className="mt-5 text-lg text-[#333]/80 leading-relaxed max-w-[60ch]">
+            <p className="mt-5 text-lg text-[#333]/80 leading-relaxed max-w-[60ch] mx-auto">
               Alguém que não deixa o plano morrer na gaveta. Esse é o
-              diferencial real da Mentto — e é exatamente o que o diagnóstico
+              diferencial real da Mentto, e é exatamente o que o diagnóstico
               começa a revelar. Foi um cliente que disse melhor do que qualquer
               slide:{" "}
               <em>
@@ -42,7 +42,7 @@ export default function ContatoPage() {
             {[
               {
                 n: "Reconhecer",
-                d: "Antes de qualquer plano, entender o momento. Pessoas, números, história — sem suavizar a verdade.",
+                d: "Antes de qualquer plano, entender o momento. Pessoas, números, história, sem suavizar a verdade.",
                 c: "border-[#107F8D]",
                 e: "text-[#107F8D]",
               },
@@ -118,14 +118,14 @@ export default function ContatoPage() {
                     contato@mentto.com.br
                   </a>
                 </div>
-                <div>
+                {/* <div>
                   <a
                     href="tel:+5514981756771"
                     className="underline underline-offset-4 hover:text-[#FFC300] transition"
                   >
                     (14) 98175-6771
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 

@@ -222,14 +222,14 @@ export default function PontePage() {
                     contato@mentto.com.br
                   </a>
                 </div>
-                <div>
+                {/* <div>
                   <a
                     href="tel:+5514981756771"
                     className="underline underline-offset-4 hover:text-[#FFC300] transition"
                   >
                     (14) 98175-6771
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
 

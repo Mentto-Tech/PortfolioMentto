@@ -217,7 +217,7 @@
   height: 3px;
   background: linear-gradient(to right, var(--color-vermelho, #C25D44), var(--color-amarelo, #FFC300));
   border-radius: 2px;
-  margin: 1rem 0 1.25rem;
+  margin: 1rem auto 1.25rem;
 }
 
 .home-section-h2 {
@@ -249,6 +249,7 @@
 }
 
 .home-trava-header {
+  text-align: center;
   margin-bottom: 3.5rem;
 }
 
@@ -353,7 +354,7 @@
 }
 
 .home-rota-header {
-  max-width: 68ch;
+  text-align: center;
   margin-bottom: 3.5rem;
 }
 
@@ -372,7 +373,7 @@
   height: 3px;
   background: linear-gradient(to right, var(--color-amarelo, #FFC300), #fff);
   border-radius: 2px;
-  margin: 1rem 0 1.25rem;
+  margin: 1rem auto 1.25rem;
 }
 
 .home-rota-lede {
@@ -463,6 +464,7 @@
 }
 
 .home-entrada-header {
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -659,6 +661,7 @@
 }
 
 .home-porque-header {
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -854,7 +857,7 @@
 }
 
 .home-cases-header {
-  max-width: 60ch;
+  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -985,6 +988,7 @@
 .home-depo-section {
   background-color: var(--color-verde);
   padding: 5rem 0 5.5rem;
+  text-align: center;
 }
 
 .home-section-tag--depo {
@@ -1008,7 +1012,7 @@
   height: 3px;
   background: linear-gradient(to right, var(--color-vermelho, #C25D44), var(--color-amarelo, #FFC300));
   border-radius: 2px;
-  margin: 1rem 0 2.5rem;
+  margin: 1rem auto 2.5rem;
 }
 
 .home-depo-grid {
@@ -1021,6 +1025,8 @@
 .home-depo-card-wrap {
   position: relative;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-depo-badge {
@@ -1047,6 +1053,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
+  flex: 1;
 }
 
 .home-depo-quote {
@@ -1060,7 +1067,7 @@
 .home-depo-tipo {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.8125rem;
+  font-size: 0.9125rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-grafite);
@@ -1080,6 +1087,7 @@
   align-items: center;
   gap: 0.875rem;
   margin-top: 0.25rem;
+  text-align: left;
 }
 
 .home-depo-avatar {
@@ -1115,7 +1123,10 @@
   padding: 5rem 0 5.5rem;
 }
 
-.home-time-header { max-width: 60ch; margin-bottom: 3rem; }
+.home-time-header { 
+  text-align: center; 
+  margin-bottom: 3rem; 
+}
 
 .home-time-lede {
   font-size: 0.9375rem;
@@ -1126,11 +1137,11 @@
 
 .home-time-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem 1.5rem;
   margin-bottom: 2rem;
 }
-@media (min-width: 768px) { .home-time-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 480px) { .home-time-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .home-time-card {
   display: flex;
@@ -1141,26 +1152,22 @@
 }
 
 .home-time-avatar {
-  width: 5rem;
-  height: 5rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
-  border: 1.5px dashed rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-verde);
+  overflow: hidden;
   flex-shrink: 0;
 }
 
 .home-time-nome {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   color: var(--color-petroleo);
 }
 
 .home-time-cargo {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: rgba(51,51,51,0.5);
   line-height: 1.4;
 }
@@ -1171,6 +1178,7 @@
 .home-faq-section {
   background-color: var(--color-petroleo);
   padding: 5rem 0 5.5rem;
+  text-align: center;
 }
 
 .home-section-tag--faq {
@@ -1213,28 +1221,22 @@
   text-align: left;
 }
 
-.home-faq-q {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
-  color: #fff;
-  line-height: 1.4;
-}
-
-.home-faq-icon {
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: var(--color-amarelo);
-  flex-shrink: 0;
-  line-height: 1;
-}
-
 .home-faq-a {
   font-size: 0.9375rem;
   color: rgba(255, 255, 255, 0.888);
   line-height: 1.75;
   margin: 0 0 1.5rem;
   max-width: 72ch;
+  text-align: left;
+}
+
+.home-faq-q {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.4;
+  text-align: left;
 }
 
 /* ─────────────────────────────────────────────
@@ -1388,11 +1390,14 @@
   padding: 2rem;
 }
 
-/* overrides do formulário dentro do card escuro */
+/* overrides do formulário dentro do card claro */
 .home-cta-form-card .form-label-text {
-  color: rgba(255,255,255,0.85);
+  color: var(--color-petroleo);
+}
+.home-cta-form-card .form-input {
+  color: var(--color-grafite);
 }
 .home-cta-form-card .form-disclaimer {
-  color: rgba(255,255,255,0.5);
+  color: rgba(51, 51, 51, 0.6);
   text-align: center;
 }

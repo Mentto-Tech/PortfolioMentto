@@ -42,7 +42,7 @@ export default function PonteContatoForm() {
         )}
 
         <p className="form-disclaimer">
-          A gente responde em até 2 dias úteis. Sem lista, sem newsletter — só a conversa.
+          A gente responde em até 2 dias úteis. Sem lista, sem newsletter, só a conversa.
         </p>
       </div>
     </form>

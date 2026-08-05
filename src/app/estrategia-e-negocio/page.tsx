@@ -36,7 +36,7 @@ const rotaSteps = [
   {
     letter: "T",
     name: "Tracionar",
-    desc: "Execução com ritmo. A estratégia sai do slide e vira movimento — plano sem tração vira gaveta.",
+    desc: "Execução com ritmo. A estratégia sai do slide e vira movimento, plano sem tração vira gaveta.",
     color: "text-[#C25D44]",
     bar: "bg-[#C25D44]",
   },
@@ -53,7 +53,7 @@ const rotaSteps = [
 const niveis = [
   {
     name: "ROTA Essencial",
-    desc: "O que importa, de forma simples e dinâmica. Formato coletivo — turma de pares do mesmo setor. Primeira experiência com planejamento estruturado.",
+    desc: "O que importa, de forma simples e dinâmica. Formato coletivo, turma de pares do mesmo setor. Primeira experiência com planejamento estruturado.",
     tag: "Entrada",
     color: "border-[#107F8D]",
     eyebrow: "text-[#107F8D]",
@@ -67,14 +67,14 @@ const niveis = [
   },
   {
     name: "ROTA Executivo",
-    desc: "Alta gestão, individual e sob medida. Mais sênior, mais caro — para quem precisa de mais presença.",
+    desc: "Alta gestão, individual e sob medida. Mais sênior, mais caro, para quem precisa de mais presença.",
     tag: "Avançado",
     color: "border-[#C25D44]",
     eyebrow: "text-[#C25D44]",
   },
   {
     name: "ROTA Conselho",
-    desc: "A sala mais fechada — conselho, sócios, sucessão, transformação. Senioridade máxima, exclusividade, ticket mais alto.",
+    desc: "A sala mais fechada, conselho, sócios, sucessão, transformação. Senioridade máxima, exclusividade, ticket mais alto.",
     tag: "Topo",
     color: "border-[#083D5F]",
     eyebrow: "text-[#083D5F]",
@@ -127,10 +127,10 @@ export default function EstrategiaENegocioPage() {
             inteiro.
           </>
         }
-        lede="Diagnóstico honesto, plano com foco e presença contínua enquanto o plano acontece. Para a empresa que quer sair do papel — e o time que precisa destravar um tema específico."
+        lede="Diagnóstico honesto, plano com foco e presença contínua enquanto o plano acontece. Para a empresa que quer sair do papel, e o time que precisa destravar um tema específico."
       />
 
-      {/* ROTA — Para quem é */}
+      {/* ROTA, Para quem é */}
       <section className="bg-white">
         <div className="container-mentto py-20 md:py-28 grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
@@ -143,15 +143,15 @@ export default function EstrategiaENegocioPage() {
               Empresa de tradição familiar ou industrial com estrutura e governança que já pedem apoio.
               A gente entra do lado, não por cima.
             </p>
-            <Link href="/rota" className="btn-secondary mt-8 inline-flex">
+            {/* <Link href="/rota" className="btn-secondary mt-8 inline-flex">
               Ver a página do ROTA →
-            </Link>
+            </Link> */}
           </div>
           <div className="md:col-span-7 space-y-4">
             {[
-              { t: "Diagnóstico honesto", d: "Antes de qualquer plano, entender o momento. Pessoas, números, história — sem suavizar a verdade.", c: "border-[#107F8D]" },
+              { t: "Diagnóstico honesto", d: "Antes de qualquer plano, entender o momento. Pessoas, números, história, sem suavizar a verdade.", c: "border-[#107F8D]" },
               { t: "Foco, não volume", d: "Poucas prioridades, com dono e prazo. O que importa, na ordem certa.", c: "border-[#C25D44]" },
-              { t: "Ritmo de tração", d: "Ritual curto e frequente. A gaveta a gente conhece — e não deixa o plano cair nela.", c: "border-[#FFC300]" },
+              { t: "Ritmo de tração", d: "Ritual curto e frequente. A gaveta a gente conhece, e não deixa o plano cair nela.", c: "border-[#FFC300]" },
               { t: "Presença contínua", d: "Enquanto o plano acontece, a Mentto continua do lado. Todo o ano.", c: "border-[#083D5F]" },
             ].map((b) => (
               <div key={b.t} className={`hover-card ${b.c}`}>
@@ -177,7 +177,7 @@ export default function EstrategiaENegocioPage() {
               R·O·T·A
             </h2>
             <p className="mt-4 text-lg text-[#333]/80 max-w-[58ch] mx-auto">
-              Um único caminho atravessa tudo que a Mentto faz. O que muda é o escopo e o cliente — nunca o &quot;não largar no meio do caminho&quot;.
+              Um único caminho atravessa tudo que a Mentto faz. O que muda é o escopo e o cliente, nunca o &quot;não largar no meio do caminho&quot;.
             </p>
           </div>
           <div className="mt-14 grid md:grid-cols-4 gap-5">
@@ -223,24 +223,21 @@ export default function EstrategiaENegocioPage() {
       {/* MERGULHO */}
       <section className="bg-[#083D5F] text-white">
         <div className="container-mentto py-20 md:py-28">
-          <div className="max-w-3xl">
-            <span className="eyebrow text-[#FFC300]">MERGULHO — Antes de qualquer contrato</span>
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="eyebrow text-[#FFC300]">MERGULHO, Antes de qualquer contrato</span>
             <h2 className="mt-1 font-heading font-bold text-white text-[2rem] md:text-[2.75rem] leading-[1.1]">
               Comece por um dia.
             </h2>
-            <p className="mt-5 text-lg text-[#F3F1EB]/90 max-w-[58ch]">
-              Imersões de 1 a 2 dias, presenciais, com o time inteiro — no tema que está travando agora.
+            <p className="mt-5 text-lg text-[#F3F1EB]/90 max-w-[58ch] mx-auto">
+              Imersões de 1 a 2 dias, presenciais, com o time inteiro, no tema que está travando agora.
               Você sai com trabalho feito, não com teoria. Muitos ROTA começaram por aqui.
             </p>
-            <Link href="/mergulho" className="mt-8 inline-flex items-center gap-2 border border-white/40 rounded-md px-5 py-3 font-heading font-semibold text-white hover:bg-white/10 transition">
-              Ver os temas do MERGULHO →
-            </Link>
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-6">
             {temas.map((g) => (
-              <div key={g.grupo} className={`bg-white/[0.07] border border-white/12 rounded-lg p-7 border-l-4 ${g.color}`}>
+              <div key={g.grupo} className={`bg-white/[0.07] border border-white/12 rounded-lg p-7 border-l-4 ${g.color} flex flex-col`}>
                 <span className={`font-heading font-bold text-xs uppercase tracking-widest text-[#FFC300]`}>{g.grupo}</span>
-                <ul className="mt-4 space-y-2">
+                <ul className="mt-4 space-y-2 flex-1">
                   {g.itens.map((item) => (
                     <li key={item} className="text-[#F3F1EB]/85 font-heading font-medium text-sm flex items-start gap-2">
                       <span className="text-[#FFC300] mt-0.5">→</span>
@@ -248,6 +245,9 @@ export default function EstrategiaENegocioPage() {
                     </li>
                   ))}
                 </ul>
+                <Link href="/mergulho" className="mt-6 inline-flex items-center gap-2 border border-white/30 rounded-md px-4 py-2 font-heading font-semibold text-sm text-white hover:bg-white/10 transition self-start">
+                  Saiba mais
+                </Link>
               </div>
             ))}
           </div>
@@ -267,15 +267,14 @@ export default function EstrategiaENegocioPage() {
                 Antes de vender qualquer coisa, a gente escuta.
               </h2>
               <p className="mt-6 text-lg text-[#F3F1EB]/90 max-w-[46ch] leading-relaxed">
-                Uma conversa curta para entender o momento — sem cardápio, sem pressa de fechar.
+                Uma conversa curta para entender o momento, sem cardápio, sem pressa de fechar.
               </p>
               <p className="mt-4 text-[#FFC300] font-heading font-semibold text-lg">
                 Sem custo. Sem compromisso. Só a conversa.
               </p>
               <div className="mt-8 space-y-2 text-[#F3F1EB]/80 text-sm">
-                <div>Pompeia/SP — atende todo o Brasil</div>
+                <div>Pompeia/SP, atende todo o Brasil</div>
                 <div><a href="mailto:contato@mentto.com.br" className="underline underline-offset-4 hover:text-[#FFC300] transition">contato@mentto.com.br</a></div>
-                <div><a href="tel:+5514981756771" className="underline underline-offset-4 hover:text-[#FFC300] transition">(14) 98175-6771</a></div>
               </div>
             </div>
             <DiagnosticoForm />

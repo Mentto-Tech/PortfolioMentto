@@ -43,6 +43,34 @@ export async function POST(req: Request) {
       `,
     });
 
+    // MailerLite: adiciona o contato ao grupo e dispara automação
+    const mlKey = process.env.MAILERLITE_API_KEY;
+    const mlGroup = process.env.MAILERLITE_GROUP_ID;
+    if (mlKey && mlGroup) {
+      try {
+        await fetch(`https://connect.mailerlite.com/api/subscribers`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${mlKey}`,
+          },
+          body: JSON.stringify({
+            email,
+            fields: {
+              name: nome,
+              phone: telefone,
+              company: empresa,
+              ...(origem && { last_name: origem }), // campo reutilizado para rastrear origem
+            },
+            groups: [mlGroup],
+          }),
+        });
+      } catch (mlErr) {
+        // falha silenciosa — email principal já foi enviado
+        console.error("[mailerlite]", mlErr);
+      }
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[contact]", err);

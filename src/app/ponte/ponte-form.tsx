@@ -3,8 +3,8 @@
 import "../contato/contato.css";
 import { useContactForm } from "@/lib/use-contact-form";
 
-export default function PonteContatoForm() {
-  const { status, handleSubmit } = useContactForm("ponte");
+export default function PonteContatoForm({ origem = "ponte" }: { origem?: string }) {
+  const { status, handleSubmit } = useContactForm(origem);
 
   if (status === "success") {
     return (

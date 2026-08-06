@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     const mlGroup = process.env.MAILERLITE_GROUP_ID;
     if (mlKey && mlGroup) {
       try {
-        await fetch(`https://connect.mailerlite.com/api/subscribers`, {
+        const mlRes = await fetch(`https://connect.mailerlite.com/api/subscribers`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -60,15 +60,19 @@ export async function POST(req: Request) {
               name: nome,
               phone: telefone,
               company: empresa,
-              ...(origem && { last_name: origem }), // campo reutilizado para rastrear origem
             },
             groups: [mlGroup],
           }),
         });
+        if (!mlRes.ok) {
+          const mlBody = await mlRes.text();
+          console.error("[mailerlite] erro", mlRes.status, mlBody);
+        }
       } catch (mlErr) {
-        // falha silenciosa — email principal já foi enviado
         console.error("[mailerlite]", mlErr);
       }
+    } else {
+      console.warn("[mailerlite] variáveis não configuradas", { mlKey: !!mlKey, mlGroup: !!mlGroup });
     }
 
     return NextResponse.json({ ok: true });

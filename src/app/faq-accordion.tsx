@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     q: "Já contratei consultoria e não deu em nada. Por que seria diferente?",
-    a: "Porque na maioria das vezes o que você contratou foi um diagnóstico e um plano — e o plano dependia do seu time executar sozinho, no meio da urgência. Aqui o acompanhamento não é o extra: é o contrato. A cadência de encontros está escrita nele.",
+    a: "Porque na maioria das vezes o que você contratou foi um diagnóstico e um plano, e o plano dependia do seu time executar sozinho, no meio da urgência. Aqui o acompanhamento não é o extra, é o contrato. A cadência de encontros está escrita nele.",
   },
   {
     q: "Quanto tempo o meu time vai gastar com isso?",
-    a: "Encontros de acompanhamento com cadência fixa e hora marcada, mais o trabalho que já era do time — só que agora priorizado. A Mentto não cria comitê, não pede relatório extra e não convoca reunião fora do combinado.",
+    a: "Encontros de acompanhamento com cadência fixa e hora marcada, mais o trabalho que já era do time, só que agora priorizado. A Mentto não cria comitê, não pede relatório extra e não convoca reunião fora do combinado.",
   },
   {
     q: "Vou ficar dependente de vocês?",

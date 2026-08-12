@@ -157,7 +157,7 @@ function Hero() {
               Consultoria de gestão, estratégia, pesquisa e inovação
             </p>
             <h1 className="home-hero-h1">
-              Junto <span style={{ color: 'var(--color-amarelo)' }}>até virar resultado.</span>
+              Juntos <span style={{ color: 'var(--color-amarelo)' }}>até virar resultado.</span>
             </h1>
             <p className="home-hero-lede">
               A Mentto transforma estratégia em rotina de gestão, para empresas e para

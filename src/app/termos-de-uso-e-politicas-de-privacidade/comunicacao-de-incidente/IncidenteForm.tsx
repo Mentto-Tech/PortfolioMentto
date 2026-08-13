@@ -30,7 +30,7 @@ export default function IncidenteForm() {
     <div className="bg-[#052438] border border-white/10 rounded-xl p-8 shadow-sm mt-12">
       <h3 className="text-2xl font-heading font-bold text-white mb-4 text-center">Comunicar Incidente</h3>
       <p className="text-white/60 mb-6 text-center text-sm">
-        Utilize o formulário abaixo para reportar um incidente de segurança ou suspeita de violação de dados.
+        Utilize o formulário abaixo para reportar um incidente de segurança ou suspeita de violação de dados. Seus dados serão mantidos por 10 anos para fins de compliance e auditoria.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-6 text-left">

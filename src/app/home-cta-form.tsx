@@ -41,7 +41,7 @@ export default function HomeCTAForm() {
           <p className="text-red-500 text-sm">Algo deu errado. Tente novamente ou mande um email direto.</p>
         )}
 
-        <p className="form-disclaimer">A gente responde em até 2 dias úteis.</p>
+        <p className="form-disclaimer">A gente responde em até 2 dias úteis. Seus dados serão mantidos por 10 anos para histórico de atendimento.</p>
       </div>
     </form>
   );

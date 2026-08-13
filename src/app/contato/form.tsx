@@ -59,7 +59,7 @@ export default function ContatoForm({ assunto }: Props) {
         )}
 
         <p className="form-disclaimer">
-          A gente responde em até 2 dias úteis. Sem lista, sem newsletter, só a conversa.
+          A gente responde em até 2 dias úteis. Sem lista, sem newsletter, só a conversa. Seus dados serão mantidos por 10 anos para histórico de atendimento.
         </p>
       </div>
     </form>

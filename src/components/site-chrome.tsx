@@ -124,6 +124,11 @@ export function Footer() {
               contato@mentto.com.br
             </a>
           </div>
+          <div className="mt-4">
+            <Link href="/termos-de-uso-e-politicas-de-privacidade" className="footer-link-underline text-sm opacity-60 hover:opacity-100 transition-opacity">
+              Termos de Uso e Privacidade
+            </Link>
+          </div>
           {/* <div>
             <a href="tel:+5514981756771" className="footer-link-underline">
               (14) 98175-6771

@@ -4,6 +4,7 @@ import { LayoutDashboard, Rocket, Users, CalendarCheck, FileText, FlaskConical, 
 import { Nav, Footer } from "@/components/site-chrome";
 import HomeCTAForm from "./home-cta-form";
 import FAQAccordion from "./faq-accordion";
+// import QuizDiagnostico from "./quiz-diagnostico";
 import "./home.css";
 
 /* ============================================================
@@ -805,6 +806,7 @@ export default function Home() {
         <Time />
         <FAQ />
         <TambemFazParte />
+        {/* <QuizDiagnostico /> */}
         <CTA />
       </main>
       <Footer />

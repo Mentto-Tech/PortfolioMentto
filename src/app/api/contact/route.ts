@@ -6,7 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const RECIPIENTS = [
   "mentto.tech@gmail.com",
   "christopher@mentto.com.br",
-  "fernanda.miranda@mento.com.br",
+  "fernanda.miranda@mentto.com.br",
   "tiago@mentto.com.br",
 ];
 

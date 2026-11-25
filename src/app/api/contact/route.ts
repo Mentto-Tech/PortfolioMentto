@@ -7,6 +7,8 @@ const RECIPIENTS = [
   "mentto.tech@gmail.com",
   "christopher@mentto.com.br",
   "fernanda.miranda@mentto.com.br",
+  "hugo.butarelli@mentto.com.br",
+  "isabelly.miranda@mentto.com.br",
   "tiago@mentto.com.br",
 ];
 
